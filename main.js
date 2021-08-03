@@ -6,6 +6,9 @@ const movimientoJugador = document.querySelector("#movimiento-jugador");
 const puntajeJugador = document.querySelector("#puntaje-jugador");
 const puntajeMaquina = document.querySelector("#puntaje-maquina");
 const resultadoRonda = document.querySelector("#resultado-ronda");
+const cantidadRondas = document.querySelector("#cantidad-rondas");
+
+let cantidadDeRondas = 0;
 
 let pJugador = 0;
 let pMaquina = 0;
@@ -69,6 +72,8 @@ botonPiedra.addEventListener('click', (e) => {
     movimientoJugador.innerText = "Piedra";
     puntajeJugador.innerText = pJugador;
     puntajeMaquina.innerText = pMaquina;
+    cantidadDeRondas++
+    cantidadRondas.innerText = cantidadDeRondas;
 });
 
 botonPapel.addEventListener('click', (e) => {
@@ -80,6 +85,8 @@ botonPapel.addEventListener('click', (e) => {
     movimientoJugador.innerText = "Papel";
     puntajeJugador.innerText = pJugador;
     puntajeMaquina.innerText = pMaquina;
+    cantidadDeRondas++
+    cantidadRondas.innerText = cantidadDeRondas;
 });
 
 botonTijera.addEventListener('click', (e) => {
@@ -91,4 +98,6 @@ botonTijera.addEventListener('click', (e) => {
     movimientoJugador.innerText = "Tijera";
     puntajeJugador.innerText = pJugador;
     puntajeMaquina.innerText = pMaquina;
+    cantidadDeRondas++
+    cantidadRondas.innerText = cantidadDeRondas;
 });
